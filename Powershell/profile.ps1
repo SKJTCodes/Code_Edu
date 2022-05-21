@@ -15,3 +15,8 @@ function getsize
         $_.fullname, '{0:N2} GB' -f ($len / 1Gb)
     }
 }
+
+function getdate
+{
+    return get-date -format "yyyymmdd-HH-mm-ss"
+}
