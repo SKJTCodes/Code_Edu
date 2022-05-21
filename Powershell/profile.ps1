@@ -16,7 +16,15 @@ function getsize
     }
 }
 
+# get current date
 function getdate
 {
     return get-date -format "yyyymmdd-HH-mm-ss"
+}
+
+# open pycharm
+function charm
+{
+    param ($folder)
+    invoke-expression "cmd /c start powershell -Command { pycharm $folder }"
 }
