@@ -1,7 +1,7 @@
 param ($projType, $toDir)
 
 $curdate = getdate
-Start-Transcript $Env:EDU\pslog-$curdate.txt
+Start-Transcript $Env:EDU\Powershell\log\pslog-$curdate.txt
 
 $path = $Env:EDU
 
