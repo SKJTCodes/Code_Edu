@@ -2,7 +2,7 @@
 function gproj
 {
     param ($projType, $toDir)
-    . "D:\Code Edu\Powershell\generateProject.ps1" $projType $toDir
+    . "D:\Code Edu\Powershell\gproj.ps1" $projType $toDir
 }
 
 # Check folder size
