@@ -1,4 +1,4 @@
-$Env:EDU = "D:\Code Edu"
+$Env:EDU = "D:\Code_Edu"
 $Env:PYWD = "C:\Users\shawn\PycharmProjects"
 $Env:CONDA = "$env:USERPROFILE\anaconda3"
 $Env:LOCALREPO = "D:\repo"
