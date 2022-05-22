@@ -22,7 +22,7 @@ $projName = (get-item $toDir).name
 
 # create local repository
 Push-Location $Env:LOCALREPO
-git init --bare $projName
+git init --bare "$projName.git"
 Pop-Location
 
 # go into new project folder and create a git repo for it
@@ -31,7 +31,7 @@ Push-Location $toDir
 git init
 git add .
 git commit -m "initial Commit"
-git remote add local $Env:LOCALREPO\$projName
+git remote add local $Env:LOCALREPO\$projName.git
 git push local
 Pop-Location
 
