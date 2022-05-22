@@ -5,6 +5,12 @@ function gproj
     . "D:\Code Edu\Powershell\gproj.ps1" $projType $toDir
 }
 
+# run python script for Password Vault
+function pwdman
+{
+    pass
+}
+
 # Check folder size
 function getsize
 {

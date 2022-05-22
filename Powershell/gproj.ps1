@@ -18,13 +18,20 @@ else
 # copy file from fromDir to toDir
 copy-item -force -recurse -verbose "$path\framework" -destination $toDir
 
-# go into new project folder and create a git repo for it
-pushd $toDir
+$projName = (get-item $toDir).name
 
+# create local repository
+Push-Location $Env:LOCALREPO
+git init --bare $projName
+Pop-Location
+
+# go into new project folder and create a git repo for it
+Push-Location $toDir
 # Create a git repo
 git init
 git add .
 git commit -m "initial Commit"
+git remote add local $Env:LOCALREPO\$projName
+git push local
+Pop-Location
 
-# return back to original folder
-popd
