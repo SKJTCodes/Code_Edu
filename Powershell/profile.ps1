@@ -26,5 +26,7 @@ function getdate
 function charm
 {
     param ($folder)
-    invoke-expression "cmd /c start powershell -Command { pycharm $folder }"
+    Push-Location $folder
+    invoke-expression "cmd /c start powershell -Command { pycharm . }"
+    Pop-Location
 }
