@@ -2,7 +2,14 @@
 function gproj
 {
     param ($projType, $toDir)
-    . "D:\Code Edu\Powershell\gproj.ps1" $projType $toDir
+    . "$env:EDU\Powershell\gproj.ps1" $projType $toDir
+}
+
+# Put project into production and add to github
+function prod
+{
+    param ($projName, $prodPath)
+    . "$env:EDU\Powershell\prod.ps1" $projName $prodPath
 }
 
 # run python script for Password Vault
